@@ -1,9 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg, #ffffff,#7c3aed,#7ccfff);
+    background: linear-gradient(135deg, #ffffff, #7c3aed, #7ccfff);
     background-size: cover;
     width: 100%;
-     background-repeat: no-repeat;
+    background-repeat: no-repeat;
 }
+
+header {
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    height: 12vh;
+    flex-flow: wrap row;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(124, 58, 237, 0.2);
+    box-shadow: 0 8px 20px 20px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 10px 20px 10px 20px;
+}
+
+#title {
+    font-size: 2rem;
+    font-family: "Mogra";
+    margin: 0;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #0f172a;
+    width: 50%;
+}
+.header-nav{
+    width: 45%;
+    padding-right: 30px;
+}
+#tags {
+    list-style: none;
+    display: flex;
+    gap: 55px;
+    width: 100%;
+}
+
+#tags a{
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    position: relative;
+    transform: 0.3s ease;
+}
+
