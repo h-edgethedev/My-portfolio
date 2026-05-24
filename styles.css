@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Mogra&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Mogra&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+
 
 body {
     margin: 0;
@@ -13,7 +14,7 @@ body {
 header {
     background: rgba(255, 255, 255, 0.2);
     display: flex;
-    height: 12vh;
+    height: 10vh;
     flex-flow: wrap row;
     backdrop-filter: blur(12px);
     border-bottom: 1px solid rgba(124, 58, 237, 0.2);
@@ -23,6 +24,7 @@ header {
     justify-content: space-between;
     z-index: 1000;
     padding: 10px 20px 10px 20px;
+    top: 0;
 }
 
 #title {
@@ -34,10 +36,12 @@ header {
     color: #0f172a;
     width: 50%;
 }
-.header-nav{
+
+.header-nav {
     width: 45%;
     padding-right: 30px;
 }
+
 #tags {
     list-style: none;
     display: flex;
@@ -45,11 +49,131 @@ header {
     width: 100%;
 }
 
-#tags a{
+#tags a {
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     position: relative;
     transform: 0.3s ease;
+}
+
+.nav-btn {
+    position: relative;
+}
+
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 2px;
+    background: #38bdf8;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover::after {
+    width: 100%;
+}
+
+.nav-btn:hover {
+    color: red;
+    font-family: "Mogra";
+    font-size: 1.3rem;
+}
+
+.image-intro {
+    display: flex;
+    padding: 50px 8%;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 90vh;
+    gap: 60px;
+}
+
+#introduction h4 {
+    font-size: 1.18rem;
+    font-family: "Helvetica";
+    font-weight: bolder;
+    color: blue;
+}
+
+#name {
+    font-family: "Italianno", cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 13px;
+    color: #1e1b4b;
+    margin-top: 0;
+}
+
+.nickname {
+    color: #7c3aed;
+    font-weight: bold;
+}
+
+.pronunciation {
+    font-size: 0.9rem;
+    color: #1e1b4b;
+    margin-left: 10px;
+}
+
+#introduction h3 {
+    color: #374151;
+    font-size: 1.2rem;
+}
+
+#role {
+    color: #374151;
+    max-width: 600px;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.cta-buttons {
+    background: linear-gradient(135deg, #4da3ff, #7c3aed);
+    padding: 20px;
+    width: 170px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 650;
+    margin-right: 25px;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.cta-buttons:hover{
+    background: linear-gradient(135deg, #7c3aed, #4da3ff);
+    transform: translate(4px, -2px);
+    font-family: "Mogra";
+}
+
+.hero-image{
+    margin-top: 15px;
+    display: flex;
+}
+
+.hero-image img{
+    border-radius: 12%;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.15);
+    margin-top: 0;
+}
+
+.bio{
+    height: 60vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: auto;
+    font-size: 2rem;
+    line-height: 1.5;
+    font-family: "Italianno";
+    font-weight: 500;
 }
 
