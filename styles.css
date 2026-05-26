@@ -238,3 +238,39 @@ header {
     background: linear-gradient(270deg, #7c3aed, #9880c3);
     transform: translate(-5px, -7px);
 }
+
+.what-i-do {
+    text-align: center;
+    list-style-type: none;
+    margin: 0 auto;
+    margin-top: -25px;
+}
+
+.what-i-do h2 {
+    font-size: 2rem;
+    color: #312e81;
+    margin-top: 5px;
+    margin-bottom: 18px;
+}
+
+.what-i-do ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.what-i-do li {
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    padding: 18px 30px;
+    border-radius: 14px;
+    font-weight: 600;
+    transition: 0.4s ease;
+}
+
+.what-i-do li:hover{
+    background: rgba(255, 255, 255, 0.28);
+    transform: translateY(-5px);
+}
