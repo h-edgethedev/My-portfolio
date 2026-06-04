@@ -13,8 +13,6 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 const text = "Computer Engineering student at the University of Lagos, passionate about Web development, AI and building tech solutions"
 
-let i = 0
-let isDeleting = false
 function typingLoop(querySelector, text) {
     const element = document.querySelector(querySelector);
 
@@ -51,3 +49,49 @@ function typingLoop(querySelector, text) {
 
 typingLoop(".bio", text)
 typingLoop("#mainText", "I'm Heritage Oluwanifemi Barber")
+
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-btn");
+
+    let current = "";
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+
+        if (pageYOffset >= sectionTop - 200) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+const observer= new IntersectionObserver(entries=>{
+    entries.forEach(entry =>{
+        if (entry.isIntersecting){
+            entry.target.classList.add("show")
+        }
+    })
+})
+
+document.querySelectorAll("section").forEach(section=>{
+    section.classList.add("hidden")
+    observer.observe(section)
+})
+
+document.querySelectorAll("button").forEach(btn =>{
+    btn.addEventListener("click", ()=>{
+        btn.style.transform= "scale(0.9)"
+
+        setTimeout(()=>{
+            btn.style.transform= "scale(1)"
+        }, 150)
+    })
+})

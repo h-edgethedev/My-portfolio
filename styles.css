@@ -450,3 +450,19 @@ footer p {
     transform: translate(-5px, 3px);
     font-family: "Mogra", cursive, sans-serif, Arial;
 }
+
+.nav-btn.active {
+    color: #7c3aed;
+    font-weight: bold;
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.show{
+    opacity: 1;
+    transform: translateY(0);
+}
