@@ -1,3 +1,4 @@
+// Link amplificationfor smoother transitions
 document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener("click", function (e) {
         e.preventDefault()
@@ -10,7 +11,7 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         }
     })
 })
-
+// Typing animation for hero section and introduction
 const text = "Computer Engineering student at the University of Lagos, passionate about Web development, AI and building tech solutions"
 
 function typingLoop(querySelector, text) {
@@ -31,7 +32,7 @@ function typingLoop(querySelector, text) {
                 setTimeout(loop, 1000);
                 return;
             }
-        } 
+        }
         else {
             element.innerHTML = text.substring(0, i);
             i--;
@@ -49,7 +50,7 @@ function typingLoop(querySelector, text) {
 
 typingLoop(".bio", text)
 typingLoop("#mainText", "I'm Heritage Oluwanifemi Barber")
-
+// smoother nav buttons on scroll
 window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-btn");
@@ -72,26 +73,45 @@ window.addEventListener("scroll", () => {
         }
     });
 });
-
-const observer= new IntersectionObserver(entries=>{
-    entries.forEach(entry =>{
-        if (entry.isIntersecting){
+// Smooth appearance of elements on scroll
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
             entry.target.classList.add("show")
+        }
+        else {
+            entry.target.classList.remove("show")
         }
     })
 })
 
-document.querySelectorAll("section").forEach(section=>{
+document.querySelectorAll("section").forEach(section => {
     section.classList.add("hidden")
     observer.observe(section)
 })
 
-document.querySelectorAll("button").forEach(btn =>{
-    btn.addEventListener("click", ()=>{
-        btn.style.transform= "scale(0.9)"
+// Making the buttons push inside on click
+document.querySelectorAll("button").forEach(btn => {
+    btn.addEventListener("click", () => {
+        btn.style.transform = "scale(0.9)"
 
-        setTimeout(()=>{
-            btn.style.transform= "scale(1)"
+        setTimeout(() => {
+            btn.style.transform = "scale(1)"
         }, 150)
     })
+})
+
+// toggle navbar menu for phone screens
+
+const menuBtn = document.getElementById("menu-btn")
+const nav = document.querySelector(".header-nav")
+
+menuBtn.addEventListener("click", () => {
+    nav.classList.toggle("active")
+    if (nav.classList.contains("active")) {
+        menuBtn.textContent = "✕"
+    }
+    else{
+        menuBtn.textContent= "☰"
+    }
 })

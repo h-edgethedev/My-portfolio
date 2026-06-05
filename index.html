@@ -11,6 +11,7 @@
 <body>
     <header>
         <nav id="title"><a href="index.html ">Heritage's Portfolio</a></nav>
+        <button id="menu-btn">☰</button>
         <nav class="header-nav">
             <ul id="tags">
                 <li><a href="#Services" class="nav-btn">Services</a> </li>
@@ -26,7 +27,7 @@
             <div id="introduction">
                 <h4>Hi there,</h4>
                 <h2 class="intro" id="name">
-                    <br><span class="intro" id="mainText"></span>
+                    <span class="intro" id="mainText"></span>
                     <span class="nickname">H~Edge</span>
                 </h2>
                 <p class="pronunciation">Pronounced: /hedge/</p>
@@ -39,7 +40,8 @@
             </div>
 
             <div class="hero-image">
-                <img src="/assets/My image.png" alt="My picture" width="350px">
+                <img src="/assets/My image.png" alt="My picture" width="350px" class="hero-base">
+                <img src="/assets/funny image.jpeg" alt="Funny picture" class="hero-hover">
             </div>
         </section>
         <section class="bio">
@@ -48,33 +50,38 @@
 
         <section class="featured-projects" id="Services">
             <h2>Featured projects</h2>
-            <div class="project-card">
-                <img src="/assets/weather forecast project.png" alt="Weather App project image" class="project-image"
-                    width="450px">
-                <p class="project-title">Weather App project</p>
-                <p class="desc">A flet-based app that forecasts and gives weather information in real-time using API
-                    integration</p>
-                <a href="https://github.com/h-edgethedev/weather_forecast_python_project.git" class="project-link">View
-                    Project</a>
-            </div>
+            <div class="project-grid">
+                <div class="project-card">
+                    <img src="/assets/weather forecast project.png" alt="Weather App project image"
+                        class="project-image" width="450px">
+                    <p class="project-title">Weather App project</p>
+                    <p class="desc">A flet-based app that forecasts and gives weather information in real-time using API
+                        integration</p>
+                    <a href="https://github.com/h-edgethedev/weather_forecast_python_project.git"
+                        class="project-link">View
+                        Project</a>
+                </div>
 
-            <div class="project-card">
-                <img src="/assets/hedge tracker.png" alt="H~Edge Tracker project image" class="project-image"
-                    width="450px">
-                <p class="project-title">H~Edge Tracker</p>
-                <p class="desc">A flet-based app that automatically tracks how you spend time on your laptop and also
-                    gives AI-powered summary and insights</p>
-                <a href="https://github.com/h-edgethedev/h-edgetracker.git" class="project-link">View Project</a>
-            </div>
+                <div class="project-card">
+                    <img src="/assets/hedge tracker.png" alt="H~Edge Tracker project image" class="project-image"
+                        width="450px">
+                    <p class="project-title">H~Edge Tracker</p>
+                    <p class="desc">A flet-based app that automatically tracks how you spend time on your laptop and
+                        also
+                        gives AI-powered summary and insights</p>
+                    <a href="https://github.com/h-edgethedev/h-edgetracker.git" class="project-link">View Project</a>
+                </div>
 
-            <div class="project-card">
-                <img src="/assets/Exam Countdown Timer.png" alt="Exam Countdown timer app" class="project-image">
-                <p class="project-title">Exam Countdown Timer</p>
-                <p class="desc">A collection of PyQt5 clock tools that which includes a countdown clock that helps
-                    students track how much time is left for a particular Exam and a custom built stopwatch that helps
-                    the user keep track of time</p>
-                <a href="https://github.com/h-edgethedev/Exam-Countdown-timer.git" class="project-link">View
-                    project</a>
+                <div class="project-card">
+                    <img src="/assets/Exam Countdown Timer.png" alt="Exam Countdown timer app" class="project-image">
+                    <p class="project-title">Exam Countdown Timer</p>
+                    <p class="desc">A collection of PyQt5 clock tools that which includes a countdown clock that helps
+                        students track how much time is left for a particular Exam and a custom built stopwatch that
+                        helps
+                        the user keep track of time</p>
+                    <a href="https://github.com/h-edgethedev/Exam-Countdown-timer.git" class="project-link">View
+                        project</a>
+                </div>
             </div>
         </section>
         <section class="what-i-do">
@@ -134,7 +141,8 @@
 
         <div class="footer-links">
             <a href="https://github.com/h-edgethedev" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/barber-heritage-oluwanifemi-3542b6340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/barber-heritage-oluwanifemi-3542b6340?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                target="_blank">LinkedIn</a>
             <a href="mailto:oluwanifemibarber@gmail.com" target="_blank">Email</a>
         </div>
     </footer>
