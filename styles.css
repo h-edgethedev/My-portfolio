@@ -226,7 +226,6 @@ header {
 .project-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* 3 side-by-side on desktop */
     gap: 30px;
     width: 85%;
     margin: 40px auto 70px;
@@ -234,24 +233,18 @@ header {
 
 .project-card {
     width: auto;
-    /* was 80% — now fills its grid cell */
     margin: 0;
-    /* grid gap handles spacing now */
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     padding: 30px 28px;
-    /* trimmed side padding so content breathes */
     border-radius: 40px;
     box-shadow: 2px 5px 3px rgba(0, 0, 0, 0.4);
 }
 
 .project-image {
     width: 100%;
-    /* fluid — fixes the old 450px overflow */
     height: 200px;
-    /* uniform height across all three cards */
     object-fit: cover;
-    /* crops to fill without stretching */
     border-radius: 20px;
     display: block;
 }
@@ -614,7 +607,13 @@ footer p {
 
     .project-grid {
         grid-template-columns: 1fr;
-        /* mobile: single column */
+
         width: 90%;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
