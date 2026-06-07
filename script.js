@@ -140,3 +140,84 @@ const counters = document.querySelectorAll(".counter")
 counters.forEach(c => {
     counterObserver.observe(c)
 })
+
+
+// Random quotes functionalities
+const quotes = [
+    {
+        quote: "Success isn't about greatness. It's about consistency. Consistent Hardwork leads to success.",
+        writer: "Dwayne Johnson"
+    },
+    {
+        quote: "Success is the sum of efforts repeated Day in day out.",
+        writer: "Robert Collier"
+    },
+    {
+        quote: "What we do repeatedly do. Excellence, then, is not an act, but a habit.",
+        writer: "Aristotle"
+    },
+    {
+        quote: "Without commitment, you will never start. Without consistency, you will never finish.",
+        writer: "Denzel Washington"
+    },
+    {
+        quote: "To be the best, you have to be different.",
+        writer: "unknown"
+    },
+    {
+        quote: "Motivation keeps you qoing, but discipline keeps you growing.",
+        writer: "John C. Maxwell"
+    },
+    {
+        quote: "Winners never quit, quitters never win.",
+        writer: "Unknown"
+    }
+]
+
+
+var quote = document.getElementById("quote")
+var writer = document.getElementById("writer")
+
+setInterval(() => {
+    const randIndex = Math.floor(Math.random() * quotes.length)
+    quote.textContent = `"${quotes[randIndex].quote},,`
+    writer.textContent = quotes[randIndex].writer
+}, 4500);
+
+// Typing loop for about page
+
+const texts = [
+    "Web Developer",
+    "AI/ML Enthusiast",
+    "Frontend Engineer",
+    "Problem Solver",
+    "Computer Engineer"
+];
+
+let textIndex= 0
+let charIndex= 0
+let isDeleting= false
+
+function typeCycle() {
+    const element= document.getElementById("intro")
+    const currentText= texts[textIndex]
+    if (!isDeleting){
+        element.textContent= currentText.substring(0, charIndex)
+        charIndex++;
+
+        if (charIndex> currentText.length){
+            isDeleting= true;
+            setTimeout(typeCycle,1000);
+            return
+        }
+    }
+    else{
+        element.textContent= currentText.substring(0, charIndex)
+        charIndex--;
+        
+        if(charIndex===0){
+            isDeleting= false;
+            textIndex= textIndex
+        }
+    }
+}
