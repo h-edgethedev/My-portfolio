@@ -611,9 +611,34 @@ footer p {
         width: 90%;
     }
 
-    footer{
+    footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
     }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .image-intro {
+        min-height: auto;
+        margin-bottom: 0;
+    }
+
+    .bio {
+        margin-top: 0;
+        height: 30vh;
+        font-size: 3.5rem;
+    }
+
+    .pronunciation {
+        font-size: 1.5rem;
+    }
+
+    #introduction h3 {
+        font-size: 1.8rem;
+    }
+    #role{
+        font-size: 1.5rem;
+    }
+
 }

@@ -111,7 +111,32 @@ menuBtn.addEventListener("click", () => {
     if (nav.classList.contains("active")) {
         menuBtn.textContent = "✕"
     }
-    else{
-        menuBtn.textContent= "☰"
+    else {
+        menuBtn.textContent = "☰"
     }
+})
+
+// Countdown in the stats section
+const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+
+        const el = entry.target
+        const target = +el.dataset.target
+        var count = 0
+        const duration = 1200;                    // total time in ms for any counter
+        const timer = setInterval(() => {
+            count++;
+            el.textContent = count + (el.dataset.suffix || "");
+            if (count >= target) {
+                clearInterval(timer);
+            }
+        }, duration / target);
+    })
+})
+
+const counters = document.querySelectorAll(".counter")
+
+counters.forEach(c => {
+    counterObserver.observe(c)
 })
