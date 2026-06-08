@@ -1,13 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Mogra&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playwrite+GB+S+Guides:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Mogra&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playwrite+GB+S+Guides:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(135deg,
-            #ffffff,
-            #7c3aed,
-            #7ccfff);
+    background: linear-gradient(135deg, #ffffff, #7c3aed, #7ccfff);
     background-size: cover;
     width: 100%;
     background-repeat: no-repeat;
@@ -637,8 +634,101 @@ footer p {
     #introduction h3 {
         font-size: 1.8rem;
     }
-    #role{
+
+    #role {
         font-size: 1.5rem;
     }
 
+}
+
+main {
+    padding: 25px 85px;
+}
+
+#about-me {
+    color: purple;
+    margin-bottom: 0;
+}
+
+#description {
+    margin-top: 10px;
+    font-size: 0.8rem;
+}
+
+.intro h1 {
+    font-size: 4rem;
+    margin-top: 9px;
+    color: #1e1b4b;
+    margin-bottom: 20px;
+}
+
+.intro span {
+    color: #7c3aed;
+}
+
+.intro p {
+    font-size: 1.18;
+    width: 70%;
+    margin-top: 0;
+    font-family: Roboto, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #635e5e;
+}
+
+#intro {
+    font-size: 1.9rem;
+    font-weight: 700;
+    font-family: "Italianno";
+    color: #7c3aed;
+    margin-bottom: auto;
+}
+
+.profile-card {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 2px solid #1a1530;
+    border-bottom: 2px solid #1a1530;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(16px);
+    margin-top: 79px;
+}
+
+.pcell {
+    border-right: 2px solid #1a1530;
+    padding: 25px 28px;
+    margin-top: 0;
+}
+
+.pcell:last-child {
+    border-right: none;
+}
+
+.pcell h3 {
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    font-weight: 400;
+    font-family: Helvetica;
+    letter-spacing: 1.3px;
+    color: #7c3aed;
+
+}
+
+.pcell p {
+    margin-top: 7px;
+    margin-bottom: 12px;
+    color: #1a1530;
+}
+
+.pcell:hover{
+    background-color: #1a1530;
+    transition: 0.5s ease;
+}
+
+.pcell:hover h3{
+    color: #7ccfff;
+}
+
+.pcell:hover p{
+    color: white;
 }

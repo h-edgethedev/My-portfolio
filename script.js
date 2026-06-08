@@ -217,7 +217,9 @@ function typeCycle() {
         
         if(charIndex===0){
             isDeleting= false;
-            textIndex= textIndex
+            textIndex= (textIndex+1)%texts.length
         }
     }
+    setTimeout(typeCycle, isDeleting ? 50:80)
 }
+typeCycle()
