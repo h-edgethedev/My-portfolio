@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Mogra&family=Oswald:wght@200..700&family=Pinyon+Script&family=Playwrite+GB+S+Guides:ital@0;1&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --verydark-purple: #0f0e30;
+    --light-purple: #7c3aed;
+    --ink: #312e81;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -656,7 +662,7 @@ main {
 }
 
 .intro h1 {
-    font-size: 4rem;
+    font-size: 5rem;
     margin-top: 9px;
     color: #1e1b4b;
     margin-bottom: 20px;
@@ -666,20 +672,28 @@ main {
     color: #7c3aed;
 }
 
-.intro p {
-    font-size: 1.18;
-    width: 70%;
+.desc-p {
+    font-size: 1.18rem;
+    width: 60%;
     margin-top: 0;
     font-family: Roboto, sans-serif, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: #635e5e;
 }
 
-#intro {
-    font-size: 1.9rem;
-    font-weight: 700;
+.typing {
+    font-size: 2rem;
+    font-weight: 600;
     font-family: "Italianno";
     color: #7c3aed;
     margin-bottom: auto;
+    width: 40%;
+    margin-right: 40px;
+    padding-top: 40px;
+    word-spacing: 3px;
+}
+
+#big-div {
+    display: flex;
 }
 
 .profile-card {
@@ -720,15 +734,84 @@ main {
     color: #1a1530;
 }
 
-.pcell:hover{
+.pcell:hover {
     background-color: #1a1530;
     transition: 0.5s ease;
 }
 
-.pcell:hover h3{
+.pcell:hover h3 {
     color: #7ccfff;
 }
 
-.pcell:hover p{
+.pcell:hover p {
     color: white;
+}
+
+.currently-learning {
+    width: 87%;
+    margin: 40vh auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 30px;
+    padding-top: 18px;
+    border-radius: 18px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
+    min-height: 34vh;
+    transition: transform 0.5s ease;
+}
+
+.currently-learning h2 {
+    color: #312e81;
+    font-size: 1.9rem;
+}
+
+.currently-learning ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.currently-learning ul li {
+    width: 45%;
+    margin: 15px auto;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 13px 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border-radius: 10px;
+    color: #0f0e30;
+}
+
+.currently-learning:hover {
+    transform: translate(4px, -8px);
+}
+
+.drives {
+    width: 87%;
+    margin: 80px auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.18);
+    padding: 40px;
+    padding-top: 18px;
+    border-radius: 18px;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.5);
+    height: auto;
+    transition: transform 0.5s ease;
+}
+
+.drives h2{
+    font-size: 2.2rem;
+    color: var(--ink);
+}
+
+.drives p{
+    color: #3c3c3d;
+    font-size: 1.2rem;
+    line-height: 30px;
+    width: 90%;
+    margin: auto;
+}
+
+.drives:hover {
+    transform: translate(4px, -8px);
 }
