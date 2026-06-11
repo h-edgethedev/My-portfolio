@@ -648,6 +648,7 @@ footer p {
 
 }
 
+/* Styling about Page  */
 main {
     padding: 25px 85px;
 }
@@ -800,12 +801,12 @@ main {
     transition: transform 0.5s ease;
 }
 
-.drives h2{
+.drives h2 {
     font-size: 2.2rem;
     color: var(--ink);
 }
 
-.drives p{
+.drives p {
     color: #3c3c3d;
     font-size: 1.2rem;
     line-height: 30px;
@@ -817,19 +818,19 @@ main {
     transform: translate(4px, -8px);
 }
 
-.skills{
+.skills {
     width: 90%;
     margin: 20vh auto;
 
 }
 
-.skills h2{
+.skills h2 {
     color: var(--ink);
     text-align: center;
     font-size: 1.7rem;
 }
 
-.large-div{
+.large-div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -838,7 +839,7 @@ main {
     margin-right: auto;
 }
 
-.skill{
+.skill {
     width: 40%;
     background-color: rgba(255, 255, 255, 0.18);
     margin: auto;
@@ -849,7 +850,7 @@ main {
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
-.skill .span-container{
+.skill .span-container {
     background-color: rgba(124, 58, 237, 0.18);
     width: 10%;
     padding: 9px;
@@ -859,13 +860,13 @@ main {
     color: var(--light-purple);
 }
 
-.skill h1{
+.skill h1 {
     font-size: 1.2rem;
     color: var(--ink);
 }
 
-.skill p{
-    color: var(--lightbrown)    ;
+.skill p {
+    color: var(--lightbrown);
     width: 90%;
     margin: auto;
 }
@@ -876,16 +877,19 @@ main {
     max-width: 950px;
     margin: 0 auto 70px;
     display: grid;
-    grid-template-columns: 1fr 1fr;   /* two equal columns */
+    grid-template-columns: 1fr 1fr;
+    /* two equal columns */
     gap: 50px;
 }
 
 /* the two headings */
 .off-clock h2 {
-    font-size: 1.6rem;
-    color: #1e1b4b;            /* indigo instead of black */
+    font-size: 1.6 rem;
+    color: #1e1b4b;
+    /* indigo instead of black */
     margin-bottom: 20px;
-    padding-left: 16px;        /* makes room for the accent bar */
+    padding-left: 16px;
+    /* makes room for the accent bar */
     position: relative;
 }
 
@@ -912,13 +916,16 @@ main {
 .off-clock li {
     color: #374151;
     font-size: 1.05rem;
-    padding: 10px 0 10px 28px;     /* left padding makes room for the arrow */
+    padding: 10px 0 10px 28px;
+    /* left padding makes room for the arrow */
     position: relative;
-    border-bottom: 1px solid rgba(124, 58, 237, 0.4);   /* thin divider */
+    border-bottom: 1px solid rgba(124, 58, 237, 0.4);
+    /* thin divider */
 }
 
 .off-clock li:last-child {
-    border-bottom: none;       /* no line after the last item */
+    border-bottom: none;
+    /* no line after the last item */
 }
 
 /* custom purple arrow marker */
@@ -926,7 +933,8 @@ main {
     content: "→";
     position: absolute;
     left: 0;
-    color: #1e1b4b;      /* was #7c3aed */
+    color: #1e1b4b;
+    /* was #7c3aed */
     font-weight: bold;
 }
 
@@ -944,19 +952,22 @@ main {
     margin: 40px auto 70px;
     padding: 60px 50px;
     text-align: center;
-    position: relative;       /* anchor for the big quote mark */
+    position: relative;
+    /* anchor for the big quote mark */
 }
 
 /* big decorative quotation mark behind the text */
 .randomquotes::before {
-    content: "\201C";          /* a big " character */
+    content: "\201c";
+    /* a big " character */
     position: absolute;
     top: -20px;
     left: 50%;
     transform: translateX(-50%);
     font-family: Georgia, serif;
     font-size: 6rem;
-    color: rgba(124, 58, 237, 0.25);   /* faded purple */
+    color: rgba(124, 58, 237, 0.25);
+    /* faded purple */
     line-height: 1;
 }
 
@@ -967,7 +978,8 @@ main {
     color: #1e1b4b;
     line-height: 1.4;
     margin: 0 0 20px;
-    position: relative;       /* sits above the decorative mark */
+    position: relative;
+    /* sits above the decorative mark */
 }
 
 /* the author */
@@ -990,3 +1002,440 @@ main {
     margin: 0 auto 12px;
 }
 
+.languages {
+    width: 85%;
+    max-width: 950px;
+    margin: 0 auto 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languages h2 {
+    font-size: 1.6rem;
+    color: #1e1b4b;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.languages h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 3px;
+    background: #7c3aed;
+}
+
+#icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+}
+
+/* each icon card */
+.lang-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.lang-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.32);
+}
+
+/* consistent icon sizing */
+.lang-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    /* keeps logos from stretching */
+}
+
+.lang-card p {
+    margin: 0;
+    color: #1e1b4b;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.languages {
+    width: 85%;
+    max-width: 950px;
+    margin: 0 auto 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* heading with the accent bar, matching your other sections */
+.languages h2 {
+    font-size: 1.6rem;
+    color: #1e1b4b;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.languages h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 3px;
+    background: #7c3aed;
+}
+
+/* the row of cards */
+#icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* lets cards drop to next row on small screens */
+    justify-content: center;
+    gap: 24px;
+    width: 100%;
+}
+
+/* each icon card */
+.lang-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 18px;
+    padding: 24px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.lang-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.32);
+}
+
+/* consistent icon sizing */
+.lang-card img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    /* keeps logos from stretching */
+}
+
+.lang-card p {
+    margin: 0;
+    color: #1e1b4b;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.tools {
+    width: 85%;
+    max-width: 950px;
+    margin: 0 auto 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* heading with accent bar, matching your other sections */
+.tools h2 {
+    font-size: 1.6rem;
+    color: #1e1b4b;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.tools h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 3px;
+    background: #7c3aed;
+}
+
+.tools-container,
+#icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    width: 100%;
+}
+
+.tool-card,
+.lang-card {
+    width: 120px;
+    flex-shrink: 0;
+}
+
+/* each tool card */
+.tool-card {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 16px;
+    padding: 20px 24px;
+    width: 120px;
+    /* fixed width keeps wrapped rows tidy */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: transform 0.35s ease, background 0.35s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.32);
+}
+
+.tool-card img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    /* keeps mismatched logos from stretching */
+}
+
+.tool-card p {
+    margin: 0;
+    color: #1e1b4b;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.experience {
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 70px;
+}
+
+/* heading with the accent bar, matching your other sections */
+.experience h2 {
+    font-size: 1.6rem;
+    color: #1e1b4b;
+    margin-bottom: 30px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.experience h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 3px;
+    background: #7c3aed;
+}
+
+/* one entry: left details, right dates */
+.exp-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.18);
+}
+
+.exp-entry:last-child {
+    border-bottom: none;
+}
+
+/* left side */
+.exp-left h3 {
+    margin: 0 0 4px;
+    font-size: 1.2rem;
+    color: #1e1b4b;
+}
+
+.exp-org {
+    margin: 0 0 8px;
+    font-style: italic;
+    color: whitesmoke;
+    font-weight: 600;
+}
+
+.exp-desc {
+    margin: 0;
+    color: #374151;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* right side */
+.exp-right {
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.exp-date {
+    margin: 0;
+    color: #1e1b4b;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.exp-loc {
+    margin: 4px 0 0;
+    color: #374151;
+    font-size: 0.9rem;
+}
+
+/* responsive: stack on phones */
+@media (max-width: 600px) {
+    .exp-entry {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .exp-right {
+        text-align: left;
+    }
+}
+
+#pdf-btn {
+    display: inline-block;
+    margin: auto;
+    text-decoration: none;
+    background: none;
+    border: 3px solid rgba(255, 255, 255, 0.18);
+    padding: 15px 25px;
+    color: white;
+    font-weight: 500;
+    border-radius: 15px;
+    transition: 0.8s ease transform;
+    text-align: center;
+}
+
+#pdf-btn:hover {
+    transform: translateY(-8px);
+    background: rgba(255, 255, 255, 0.18);
+    border: none;
+    color: black;
+}
+
+.resume-wrap {
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+/* ABOUT PAGE RESPONSIVENESS */
+
+/* ---- TABLET ---- */
+@media (min-width: 601px) and (max-width: 1024px) {
+    #big-div {
+        flex-direction: column;
+    }
+
+    .typing,
+    .desc-p {
+        width: 90%;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* fix borders so the 2x2 grid looks clean */
+    .pcell {
+        border-bottom: 2px solid #1a1530;
+    }
+
+    .pcell:nth-child(2) {
+        border-right: none;
+    }
+
+    /* trim the giant vh margins */
+    .currently-learning,
+    .skills {
+        margin: 60px auto;
+    }
+}
+
+/* ---- PHONES ---- */
+@media (max-width: 600px) {
+
+    /* intro stacks */
+    #big-div {
+        flex-direction: column;
+    }
+
+    .typing,
+    .desc-p {
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .typing {
+        font-size: 2.2rem;
+        padding-top: 20px;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+
+    .pcell {
+        border-right: none;
+        border-bottom: 2px solid #1a1530;
+    }
+
+    .pcell:last-child {
+        border-bottom: none;
+    }
+
+    .currently-learning ul li {
+        width: 90%;
+    }
+
+    .skill {
+        width: 100%;
+    }
+
+    .exp-entry {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .exp-right {
+        text-align: left;
+    }
+
+    .off-clock {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .currently-learning,
+    .skills {
+        margin: 50px auto;
+    }
+
+    .currently-learning {
+        min-height: auto;
+    }
+}
