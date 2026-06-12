@@ -90,6 +90,7 @@ document.querySelectorAll("section").forEach(section => {
     observer.observe(section)
 })
 
+
 // Making the buttons push inside on click
 document.querySelectorAll("button").forEach(btn => {
     btn.addEventListener("click", () => {
@@ -223,3 +224,9 @@ function typeCycle() {
     setTimeout(typeCycle, isDeleting ? 50:80)
 }
 typeCycle()
+
+document.querySelectorAll('*').forEach(el => {
+    if (el.offsetWidth > document.documentElement.clientWidth) {
+        console.log(el);
+    }
+});

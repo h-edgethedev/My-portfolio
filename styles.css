@@ -502,7 +502,8 @@ footer p {
 
 .hidden {
     opacity: 0;
-    transform: translate(-40%);
+    transform: translateY(40px);
+    /* was translate(-40%) */
     transition: all 1.2s ease;
 }
 
@@ -663,15 +664,18 @@ main {
     font-size: 0.8rem;
 }
 
-.intro h1 {
-    font-size: 5rem;
-    margin-top: 9px;
-    color: #1e1b4b;
-    margin-bottom: 20px;
-}
-
-.intro span {
+.intro h1 span {
+    display: inline-block;
     color: #7c3aed;
+    background: rgba(124, 58, 237, 0.15);
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    font-size: 0.32em;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    margin-top: 14px;
+    vertical-align: middle;
+    letter-spacing: 1px;
 }
 
 .desc-p {
@@ -829,6 +833,32 @@ main {
     text-align: center;
     font-size: 1.7rem;
 }
+
+.resume-wrap {
+    display: block;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+#pdf-btn {
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    border: black 2px solid;
+    padding: 18px 35px;
+    border-radius: 18px;
+    transition: 0.8s ease;
+}
+
+#pdf-btn:hover {
+    color: black;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+
 
 .large-div {
     display: flex;
@@ -1050,26 +1080,6 @@ main {
     align-items: center;
     gap: 12px;
     transition: transform 0.35s ease, background 0.35s ease;
-}
-
-.lang-card:hover {
-    transform: translateY(-6px);
-    background: rgba(255, 255, 255, 0.32);
-}
-
-/* consistent icon sizing */
-.lang-card img {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    /* keeps logos from stretching */
-}
-
-.lang-card p {
-    margin: 0;
-    color: #1e1b4b;
-    font-weight: 600;
-    font-size: 1rem;
 }
 
 .languages {
@@ -1305,137 +1315,272 @@ main {
     font-size: 0.9rem;
 }
 
-/* responsive: stack on phones */
+/* ============================================
+   TABLET — reduce main padding
+   ============================================ */
+@media (min-width: 601px) and (max-width: 1048px) {
+    main {
+        padding: 25px 40px;
+        /* was 85px — gives content more room */
+    }
+
+    /* .intro{
+        margin-bottom: 0;
+    } */
+
+    .currently-learning {
+        margin-top: 18vh;
+        margin-bottom: 16vh;
+    }
+
+    .drives {
+        margin-top: 0;
+    }
+
+    .skills {
+        margin-top: 0;
+    }
+
+    #description {
+        font-size: 1.3rem;
+    }
+
+    .intro {
+        font-size: 3.5rem;
+    }
+    .desc-p{
+        font-size: 1.5rem;
+    }
+    .drives p{
+        font-size: 1.5rem;
+    }
+
+    .skill p{
+        font-size: 1.3rem;
+    }
+
+    .experience h2{
+        font-size: 2.4rem;
+    }
+
+    .exp-left h3{
+        font-size: 1.5rem;
+    }
+    .exp-right p{
+        font-size: 1.4rem;
+    }
+
+    .exp-org{
+        font-size: 1.2rem;
+    }
+
+    .exp-desc{
+        font-size: 1.2rem;
+    }
+
+    .fun-facts li{
+        font-size: 1.2rem;
+    }
+}
+
+/* ============================================
+   PHONE — the big fixes
+   ============================================ */
 @media (max-width: 600px) {
-    .exp-entry {
-        flex-direction: column;
-        gap: 6px;
+
+    /* THE KEY FIX: stop main from eating 170px of width */
+    main {
+        padding: 20px 12px;
     }
 
-    .exp-right {
-        text-align: left;
-    }
-}
-
-#pdf-btn {
-    display: inline-block;
-    margin: auto;
-    text-decoration: none;
-    background: none;
-    border: 3px solid rgba(255, 255, 255, 0.18);
-    padding: 15px 25px;
-    color: white;
-    font-weight: 500;
-    border-radius: 15px;
-    transition: 0.8s ease transform;
-    text-align: center;
-}
-
-#pdf-btn:hover {
-    transform: translateY(-8px);
-    background: rgba(255, 255, 255, 0.18);
-    border: none;
-    color: black;
-}
-
-.resume-wrap {
-    margin: 0 auto 60px;
-    text-align: center;
-}
-
-/* ABOUT PAGE RESPONSIVENESS */
-
-/* ---- TABLET ---- */
-@media (min-width: 601px) and (max-width: 1024px) {
-    #big-div {
-        flex-direction: column;
+    #description {
+        font-size: 1.05rem;
     }
 
-    .typing,
-    .desc-p {
-        width: 90%;
-    }
-
+    /* profile card: 2 cells per row */
     .profile-card {
         grid-template-columns: 1fr 1fr;
     }
 
-    /* fix borders so the 2x2 grid looks clean */
+    /* fix borders for the 2-column layout */
     .pcell {
+        border-right: 2px solid #1a1530;
         border-bottom: 2px solid #1a1530;
     }
 
-    .pcell:nth-child(2) {
+    .pcell:nth-child(2n) {
+        /* every 2nd cell: no right border (it's at the edge) */
         border-right: none;
     }
 
-    /* trim the giant vh margins */
-    .currently-learning,
-    .skills {
-        margin: 60px auto;
+    /* skills & interests: 2 per row */
+    .large-div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
     }
-}
 
-/* ---- PHONES ---- */
-@media (max-width: 600px) {
+    .skills .skill {
+        width: auto;
+        /* override the desktop 40% width */
+        margin: 0;
+        padding: 18px 10px;
+    }
 
-    /* intro stacks */
+    .skills .skill h1 {
+        font-size: 0.9rem;
+    }
+
+    .skills .skill p {
+        font-size: 0.78rem;
+        width: 100%;
+    }
+
+    /* tools & languages: small cards, more per row */
+    .tools-container .tool-card,
+    #icons-container .lang-card {
+        width: 80px;
+        padding: 12px 6px;
+    }
+
+    .tools-container .tool-card img,
+    #icons-container .lang-card img {
+        width: 34px;
+        height: 34px;
+    }
+
+    .tools-container .tool-card p,
+    #icons-container .lang-card p {
+        font-size: 0.7rem;
+        word-break: break-word;
+        line-height: 1.15;
+    }
+
+    .intro {
+        text-align: left;
+    }
+
+    /* the big name: smaller, tighter, controlled */
+    .intro h1 {
+        font-size: 3.3rem;
+        line-height: 1.05;
+        margin-bottom: 18px;
+    }
+
+    /* keep "—H~EDGE" on its own line, in your purple */
+    .intro h1 span {
+        display: block;
+    }
+
+    /* stack the typed role above the description */
     #big-div {
         flex-direction: column;
+        gap: 14px;
     }
 
-    .typing,
+    /* typed role: full width, sensible size */
+    .typing {
+        width: 100%;
+        font-size: 2rem;
+        /* down from 2.8rem so it fits */
+        margin-right: 0;
+        padding-top: 0;
+    }
+
+    /* description paragraph: full width, readable */
     .desc-p {
         width: 100%;
-        margin-right: 0;
+        font-size: 1rem;
+        line-height: 1.6;
     }
 
-    .typing {
-        font-size: 2.2rem;
-        padding-top: 20px;
-    }
-
-    .profile-card {
-        grid-template-columns: 1fr;
-    }
-
-    .pcell {
-        border-right: none;
-        border-bottom: 2px solid #1a1530;
-    }
-
-    .pcell:last-child {
-        border-bottom: none;
+    /* --- CURRENTLY LEARNING: full-width marker list --- */
+    .currently-learning {
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        /* even shadow, not right-offset */
+        margin-bottom: 120px;
+        margin-top: 150px;
     }
 
     .currently-learning ul li {
-        width: 90%;
+        width: 100%;
+        margin: 0 0 10px 0;
+        padding: 14px 14px 14px 34px;
+        text-align: left;
+        position: relative;
+        background: rgba(255, 255, 255, 0.12);
+        border-radius: 10px;
+        font-size: 1rem;
     }
 
-    .skill {
-        width: 100%;
+    /* the purple arrow marker */
+    .currently-learning ul li::before {
+        content: "→";
+        position: absolute;
+        left: 12px;
+        color: #7c3aed;
+        font-weight: bold;
+    }
+
+    .drives {
+        background: none;
+        box-shadow: none;
+        width: 90%;
+        text-align: center;
+        margin: auto;
+    }
+
+    html,
+    body {
+        overflow-x: hidden;
+        /* stops sideways scrolling */
+        max-width: 100%;
+    }
+
+    .drives p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    section.drives {
+        min-height: auto;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .skill .span-container {
+        width: 25%;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .skill p {
+        font-size: 1.7rem;
+        font-weight: 600;
     }
 
     .exp-entry {
         flex-direction: column;
-        gap: 6px;
+        /* stack title and date vertically */
+        gap: 4px;
+    }
+
+    .exp-left h3 {
+        font-size: 1.05rem;
+        /* slightly smaller so it wraps less */
     }
 
     .exp-right {
         text-align: left;
+        /* date aligns left when stacked */
     }
 
-    .off-clock {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .exp-date {
+        margin-top: 2px;
     }
 
-    .currently-learning,
-    .skills {
-        margin: 50px auto;
-    }
 
-    .currently-learning {
-        min-height: auto;
-    }
 }
