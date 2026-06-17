@@ -177,16 +177,16 @@ const quotes = [
     }
 ]
 
-
 var quote = document.getElementById("quote")
 var writer = document.getElementById("writer")
 
-setInterval(() => {
-    const randIndex = Math.floor(Math.random() * quotes.length)
-    quote.textContent = `"${quotes[randIndex].quote},,`
-    writer.textContent = quotes[randIndex].writer
-}, 4500);
-
+if (quote && writer) {
+    setInterval(() => {
+        const randIndex = Math.floor(Math.random() * quotes.length)
+        quote.textContent = `"${quotes[randIndex].quote}"`
+        writer.textContent = quotes[randIndex].writer
+    }, 4500);
+}
 // Typing loop for about page
 
 const texts = [
@@ -225,7 +225,9 @@ function typeCycle() {
     }
     setTimeout(typeCycle, isDeleting ? 50:80)
 }
-typeCycle()
+if (document.getElementById("intro")) {
+    typeCycle();
+}
 
 document.querySelectorAll('*').forEach(el => {
     if (el.offsetWidth > document.documentElement.clientWidth) {
