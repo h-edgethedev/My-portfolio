@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - H~EDGE</title>
+    <link rel="stylesheet" href="contact-styles.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="title"><a href="index.html">Heritage's Portfolio</a></nav>
+        <button id="menu-btn">☰</button>
+        <nav class="header-nav">
+            <ul id="tags">
+                <li><a href="index.html" class="nav-btn">Services</a></li>
+                <li><a href="about me.html" class="nav-btn">About Me</a></li>
+                <li><a href="#" class="nav-btn">Gallery</a></li>
+                <li><a href="projects.html" class="nav-btn">Projects</a></li>
+                <li><a href="contact.html" class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-main">
+        <!-- intro -->
+        <section class="contact-hero">
+            <p class="topper contact-topper">//get_in_touch</p>
+            <h1>Let's <span>build</span> something.</h1>
+            <p class="contact-lead">Got a project, a question, or just want to connect? Drop a message — I read
+                everything.</p>
+        </section>
+
+        <div class="contact-grid">
+            <!-- form -->
+            <form id="contact-form" novalidate>
+                <div class="field">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="What should I call you?">
+                    <span class="err" data-for="name"></span>
+                </div>
+
+                <div class="field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="you@example.com">
+                    <span class="err" data-for="email"></span>
+                </div>
+
+                <div class="field">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="6" placeholder="Tell me about it..."></textarea>
+                    <span class="err" data-for="message"></span>
+                </div>
+
+                <button type="submit" class="send-btn">Send message →</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
+
+            <!-- contact cards -->
+            <aside class="contact-side">
+                <h3>Other ways to reach me</h3>
+
+                <a class="contact-card" href="mailto:oluwanifemibarber@gmail.com">
+                    <span class="cc-label">Email</span>
+                    <span class="cc-value">oluwanifemibarber@gmail.com</span>
+                </a>
+
+                <a class="contact-card" href="https://github.com/h-edgethedev" target="_blank">
+                    <span class="cc-label">GitHub</span>
+                    <span class="cc-value">@h-edgethedev</span>
+                </a>
+
+                <a class="contact-card" href="https://www.linkedin.com/in/barber-heritage-oluwanifemi-3542b6340"
+                    target="_blank">
+                    <span class="cc-label">LinkedIn</span>
+                    <span class="cc-value">Barber Heritage Oluwanifemi</span>
+                </a>
+
+                <div class="status-card">
+                    <span class="status-dot"></span> Available for freelance &amp; collaborations
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heritage Oluwanifemi Barber</p>
+        <div class="footer-links">
+            <a href="https://github.com/h-edgethedev" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/barber-heritage-oluwanifemi-3542b6340" target="_blank">LinkedIn</a>
+            <a href="mailto:oluwanifemibarber@gmail.com" target="_blank">Email</a>
+        </div>
+    </footer>
+
+    <script src="contact-script.js"></script>
+</body>
+
+</html>

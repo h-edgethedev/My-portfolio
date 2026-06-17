@@ -74,6 +74,7 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+
 // Smooth appearance of elements on scroll
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
