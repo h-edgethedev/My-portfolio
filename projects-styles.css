@@ -1,0 +1,313 @@
+/* ============================================
+   PROJECTS PAGE
+   ============================================ */
+
+
+.projects-main {
+    padding: 25px 85px;
+}
+
+/* --- hero --- */
+.proj-hero {
+    margin-bottom: 40px;
+}
+
+.proj-topper {
+    color: var(--light-purple);
+    font-family: "Oswald", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+.proj-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    color: var(--ink);
+    margin: 0 0 14px;
+}
+
+.proj-hero h1 span {
+    color: var(--light-purple);
+}
+
+.proj-lead {
+    color: var(--lightbrown);
+    font-size: 1.1rem;
+    max-width: 620px;
+}
+
+/* --- filter tabs --- */
+.filters {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 36px;
+}
+
+.filter {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    padding: 10px 22px;
+    border-radius: 999px;
+    border: 1px solid rgba(124, 58, 237, 0.4);
+    background: rgba(255, 255, 255, 0.18);
+    color: var(--ink);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.filter.active {
+    background: var(--light-purple);
+    color: white;
+    border-color: var(--light-purple);
+}
+
+/* --- projects grid --- */
+.proj-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.proj-item {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    padding: 26px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.proj-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px -20px rgba(124, 58, 237, 0.6);
+}
+
+.proj-item.hide {
+    display: none;
+}
+
+.proj-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.proj-num {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--light-purple);
+    opacity: 0.5;
+}
+
+.proj-stack {
+    font-size: 0.72rem;
+    color: var(--lightbrown);
+    border: 1px solid rgba(124, 58, 237, 0.3);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.proj-item h3 {
+    font-size: 1.3rem;
+    color: var(--ink);
+    margin: 0 0 8px;
+}
+
+.proj-item p {
+    color: var(--lightbrown);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0 0 16px;
+    flex-grow: 1;
+}
+
+.tagrow {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.tagrow span {
+    font-size: 0.7rem;
+    color: var(--light-purple);
+    background: rgba(124, 58, 237, 0.12);
+    padding: 4px 10px;
+    border-radius: 999px;
+}
+
+.proj-link {
+    font-family: "Oswald", sans-serif;
+    font-size: 0.9rem;
+    color: var(--light-purple);
+    text-decoration: none;
+    font-weight: 600;
+    transition: letter-spacing 0.2s ease;
+}
+
+.proj-link:hover {
+    text-decoration: underline;
+}
+
+.proj-link.muted {
+    color: var(--lightbrown);
+    cursor: default;
+}
+
+/* --- publications --- */
+.publications {
+    margin-bottom: 80px;
+}
+
+.publications h2 {
+    font-size: 1.8rem;
+    color: var(--ink);
+    margin-bottom: 30px;
+    padding-left: 16px;
+    position: relative;
+}
+
+.publications h2::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 4px;
+    bottom: 4px;
+    width: 5px;
+    border-radius: 3px;
+    background: var(--light-purple);
+}
+
+.pub-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid rgba(124, 58, 237, 0.18);
+}
+
+.pub-entry:last-child {
+    border-bottom: none;
+}
+
+.pub-left h3 {
+    font-size: 1.2rem;
+    color: var(--ink);
+    margin: 0 0 4px;
+}
+
+
+.hidden {
+    opacity: 0;
+    transform: translateY(69px);
+    /* was translate(-40%) */
+    transition: all 1.9s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}   
+
+.pub-meta {
+    font-style: italic;
+    color: white;
+    font-weight: 600;
+    margin: 0 0 8px;
+    font-size: 0.95rem;
+}
+
+.pub-desc {
+    color: var(--lightbrown);
+    font-size: 1rem;
+    margin: 0;
+}
+
+.pub-tag {
+    flex-shrink: 0;
+    font-family: "Oswald", sans-serif;
+    font-size: 0.78rem;
+    letter-spacing: 1px;
+    color: white;
+    background: var(--light-purple);
+    padding: 6px 14px;
+    border-radius: 999px;
+    text-transform: uppercase;
+}
+
+/* --- cta button (reuses your cta-strip) --- */
+.proj-cta-btn {
+    display: inline-block;
+    background-color: whitesmoke;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 13px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--light-purple);
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.proj-cta-btn:hover {
+    transform: translate(-5px, -3.5px);
+    background: #f3f4f6;
+}
+
+/* ============================================
+   PROJECTS PAGE — TABLET
+   ============================================ */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .projects-main {
+        padding: 25px 40px;
+    }
+
+    .proj-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ============================================
+   PROJECTS PAGE — PHONE
+   ============================================ */
+@media (max-width: 600px) {
+    .projects-main {
+        padding: 20px 14px;
+    }
+
+    .proj-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .filters {
+        gap: 8px;
+    }
+
+    .filter {
+        padding: 8px 16px;
+        font-size: 0.82rem;
+    }
+
+    /* publications stack on phone */
+    .pub-entry {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    main {
+        margin-top: 100px;
+    }
+}

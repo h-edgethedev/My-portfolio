@@ -50,6 +50,7 @@ function typingLoop(querySelector, text) {
 
 typingLoop(".bio", text)
 typingLoop("#mainText", "I'm Heritage Oluwanifemi Barber")
+
 // smoother nav buttons on scroll
 window.addEventListener("scroll", () => {
     const sections = document.querySelectorAll("section");

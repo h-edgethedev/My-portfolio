@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - H~EDGE</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="projects-styles.css">
+</head>
+
+<body>
+    <header>
+        <nav id="title"><a href="index.html ">Heritage's Portfolio</a></nav>
+        <button id="menu-btn">☰</button>
+        <nav class="header-nav">
+            <ul id="tags">
+                <li><a href="#what-i-do" class="nav-btn">Services</a> </li>
+                <li><a href="about me.html" class="nav-btn">About Me</a> </li>
+                <li><a href="#" class="nav-btn">Gallery</a> </li>
+                <li><a href="#" class="nav-btn">Projects</a></li>
+                <li><a href="#" class="nav-btn">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="projects-main">
+        <!-- intro -->
+        <section class="proj-hero">
+            <p class="topper proj-topper">//my_work</p>
+            <h1>Things I've <span>built.</span></h1>
+            <p class="proj-lead">A collection of projects, experiments and publications — most built solo under the
+                H~Edge Studios brand.</p>
+        </section>
+
+        <!-- filter tabs -->
+        <section class="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="web">Web</button>
+            <button class="filter" data-filter="desktop">Desktop</button>
+            <button class="filter" data-filter="ai">AI / ML</button>
+        </section>
+
+        <!-- projects grid -->
+        <section class="all-projects">
+            <div class="proj-grid">
+
+                <article class="proj-item" data-cat="desktop">
+                    <div class="proj-top"><span class="proj-num">01</span><span class="proj-stack">Flet · API</span>
+                    </div>
+                    <h3>Weather App</h3>
+                    <p>A Flet-based desktop app that forecasts and serves real-time weather data through live API
+                        integration.</p>
+                    <div class="tagrow"><span>Python</span><span>Flet</span><span>REST API</span></div>
+                    <a href="https://github.com/h-edgethedev/weather_forecast_python_project.git" target="_blank"
+                        class="proj-link">View on GitHub →</a>
+                </article>
+
+                <article class="proj-item" data-cat="desktop ai">
+                    <div class="proj-top"><span class="proj-num">02</span><span class="proj-stack">Flet · Claude
+                            API</span></div>
+                    <h3>H~Edge Tracker</h3>
+                    <p>A Windows activity tracker with AI-powered productivity scoring, sleep detection, history with
+                        SVG
+                        progress rings and trend charts.</p>
+                    <div class="tagrow"><span>Python</span><span>Flet</span><span>Claude API</span></div>
+                    <a href="https://github.com/h-edgethedev/h-edgetracker.git" target="_blank" class="proj-link">View
+                        on
+                        GitHub →</a>
+                </article>
+
+                <article class="proj-item" data-cat="desktop">
+                    <div class="proj-top"><span class="proj-num">03</span><span class="proj-stack">PyQt5</span></div>
+                    <h3>Exam Countdown Timer</h3>
+                    <p>A set of PyQt5 clock tools — a countdown that tracks time left before an exam, plus a
+                        custom-built
+                        stopwatch. Also ported to the web.</p>
+                    <div class="tagrow"><span>PyQt5</span><span>GitHub Pages</span></div>
+                    <a href="https://github.com/h-edgethedev/Exam-Countdown-timer.git" target="_blank"
+                        class="proj-link">View on GitHub →</a>
+                </article>
+
+                <article class="proj-item" data-cat="ai web">
+                    <div class="proj-top"><span class="proj-num">04</span><span class="proj-stack">React ·
+                            Node.js</span>
+                    </div>
+                    <h3>Siwesync AI</h3>
+                    <p>An AI-powered platform that helps students secure internship and SIWES opportunities through
+                        intelligent matching, CV analysis, skill-gap assessment, and personalized career roadmaps.</p>
+                    <div class="tagrow"><span>Claude API</span><span>Scikit-learn</span><span></span></div>
+                    <span class="proj-link muted">Case study coming soon</span>
+                </article>
+
+                <article class="proj-item" data-cat="ai web">
+                    <div class="proj-top"><span class="proj-num">05</span><span class="proj-stack">MediaPipe · JS</span>
+                    </div>
+                    <h3>StudyPath AI(Collaboration)</h3>
+                    <p>An AI-powered learning platform that creates personalized study roadmaps, helping students learn
+                        more effectively through structured guidance, progress tracking, and adaptive learning support.
+                    </p>
+                    <div class="tagrow"><span>JavaScript</span><span>MediaPipe</span><span>Web Speech API</span></div>
+                    <span class="proj-link muted">Repo on request</span>
+                </article>
+
+                <article class="proj-item" data-cat="desktop web">
+                    <div class="proj-top"><span class="proj-num">06</span><span class="proj-stack">Flet ·
+                            E-commerce</span></div>
+                    <h3>Voltmart</h3>
+                    <p>A gadget e-commerce platform built with Flet — product browsing, cart flow and a clean, branded
+                        UI.</p>
+                    <div class="tagrow"><span>Python</span><span>Flet</span></div>
+                    <a href="https://github.com/h-edgethedev/Voltmart-E-commerce-website.git" target="_blank"
+                        class="proj-link">View on GitHub →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- publications -->
+        <section class="publications">
+            <h2>Publications & Documents</h2>
+
+            <div class="pub-entry">
+                <div class="pub-left">
+                    <h3>INVESTIGATION OF WIRELESS COMMUNICATION SYSTEMS USING
+                        WAVELET ANALYSIS IN DEFENSE TECHNOLOGIES</h3>
+                    <p class="pub-meta">Academic and Research paper, EEG213, Unilag </p>
+                    <p class="pub-desc"> A conceptual solution is proposed and a Python based wavelet sensing algorithm
+                        proves that wavelet analysis can effectively detect jamming.</p>
+                </div>
+                <span class="pub-tag">Research</span>
+            </div>
+
+            <div class="pub-entry">
+                <div class="pub-left">
+                    <h3>Brillouin zones forcomparative analysis inadvanced physical electronic systems</h3>
+                    <p class="pub-meta">Academic and Research paper, EEG213, Unilag</p>
+                    <p class="pub-desc"></p>
+                </div>
+                <span class="pub-tag">Research</span>
+            </div>
+        </section>
+
+         <section class="randomquotes">
+            <p id="quote">Random quote</p>
+            <h5 id="writer"></h5>
+        </section> 
+
+        <!-- cta -->
+        <section class="cta-strip">
+            <h2>Like what you see?</h2>
+            <p>I'm open to collaborations and freelance work.</p>
+            <a href="#" class="proj-cta-btn">Get in touch →</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Heritage Oluwanifemi Barber</p>
+        <div class="footer-links">
+            <a href="https://github.com/h-edgethedev" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/barber-heritage-oluwanifemi-3542b6340" target="_blank">LinkedIn</a>
+            <a href="mailto:oluwanifemibarber@gmail.com" target="_blank">Email</a>
+        </div>
+    </footer>
+
+    <script src="projects-script.js"></script>
+</body>
+
+</html>

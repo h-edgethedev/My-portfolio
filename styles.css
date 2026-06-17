@@ -526,6 +526,10 @@ footer p {
         color: white;
     }
 
+    #title{
+        font-size: 1.7rem;
+    }
+
     .header-nav {
         display: none;
         background: rgba(255, 255, 255, 0.9);
@@ -542,6 +546,10 @@ footer p {
         border-bottom: 1px solid rgba(182, 255, 60, 0.2);
     }
 
+    header{
+        position: fixed;
+        width: 94%;
+    }
     .header-nav.active {
         display: block;
     }
@@ -1381,6 +1389,10 @@ main {
     .fun-facts li{
         font-size: 1.2rem;
     }
+
+    #quote{
+        font-size: 3.3rem;
+    }
 }
 
 /* ============================================
@@ -1581,6 +1593,4 @@ main {
     .exp-date {
         margin-top: 2px;
     }
-
-
 }
