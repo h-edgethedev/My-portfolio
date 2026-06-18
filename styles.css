@@ -1577,6 +1577,21 @@ main {
         font-size: 1rem;
     }
 
+     .randomquotes {
+        width: 90%;
+        padding: 50px 20px;     /* was 60px 50px — trim the big side padding */
+    }
+
+    #quote {
+        font-size: 1.9rem;      /* smaller so it doesn't wrap weirdly */
+        line-height: 1.35;
+    }
+
+    .randomquotes::before {
+        font-size: 4.5rem;      /* shrink the big decorative " a bit */
+        top: -10px;
+    }
+
     /* the purple arrow marker */
     .currently-learning ul li::before {
         content: "→";
