@@ -517,9 +517,10 @@ footer p {
 }
 
 @media (max-width: 768px) {
-    main{
+    main {
         margin-top: 100px;
     }
+
     #menu-btn {
         display: block;
         font-size: 2rem;
@@ -529,7 +530,7 @@ footer p {
         color: white;
     }
 
-    #title{
+    #title {
         font-size: 1.7rem;
     }
 
@@ -549,10 +550,11 @@ footer p {
         border-bottom: 1px solid rgba(182, 255, 60, 0.2);
     }
 
-    header{
+    header {
         position: fixed;
         width: 94%;
     }
+
     .header-nav.active {
         display: block;
     }
@@ -631,6 +633,61 @@ footer p {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+
+.what-i-do ul {
+        gap: 14px;
+        padding: 0;
+    }
+
+    .what-i-do li {
+        width: 85%;
+        max-width: 320px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        text-align: left;
+        padding: 16px 20px;
+        background: linear-gradient(135deg,
+                rgba(255, 255, 255, 0.25),
+                rgba(124, 58, 237, 0.12));
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-radius: 16px;
+        box-shadow: 0 8px 20px -8px rgba(124, 58, 237, 0.4);
+        font-size: 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* a soft accent bar on the left edge of each card */
+    .what-i-do li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background: linear-gradient(180deg, #7c3aed, #4da3ff);
+    }
+
+    /* the icon in a rounded gradient tile */
+    .wid-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+        border-radius: 12px;
+        background: linear-gradient(135deg, #7c3aed, #4da3ff);
+        color: white;
+        font-size: 1.1rem;
+        box-shadow: 0 4px 10px -2px rgba(124, 58, 237, 0.5);
+    }
+
+    .what-i-do li:active {
+        transform: scale(0.97);
     }
 }
 
@@ -1345,41 +1402,44 @@ main {
     .intro {
         font-size: 3.5rem;
     }
-    .desc-p{
-        font-size: 1.5rem;
-    }
-    .drives p{
+
+    .desc-p {
         font-size: 1.5rem;
     }
 
-    .skill p{
+    .drives p {
+        font-size: 1.5rem;
+    }
+
+    .skill p {
         font-size: 1.3rem;
     }
 
-    .experience h2{
+    .experience h2 {
         font-size: 2.4rem;
     }
 
-    .exp-left h3{
+    .exp-left h3 {
         font-size: 1.5rem;
     }
-    .exp-right p{
+
+    .exp-right p {
         font-size: 1.4rem;
     }
 
-    .exp-org{
+    .exp-org {
         font-size: 1.2rem;
     }
 
-    .exp-desc{
+    .exp-desc {
         font-size: 1.2rem;
     }
 
-    .fun-facts li{
+    .fun-facts li {
         font-size: 1.2rem;
     }
 
-    #quote{
+    #quote {
         font-size: 3.3rem;
     }
 }
