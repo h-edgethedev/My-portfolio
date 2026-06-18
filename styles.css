@@ -502,7 +502,7 @@ footer p {
 
 .hidden {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(100px);
     /* was translate(-40%) */
     transition: all 2s ease;
 }

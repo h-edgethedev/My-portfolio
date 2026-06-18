@@ -168,7 +168,7 @@ const quotes = [
         writer: "unknown"
     },
     {
-        quote: "Motivation keeps you qoing, but discipline keeps you growing.",
+        quote: "Motivation keeps you Going, but discipline keeps you growing.",
         writer: "John C. Maxwell"
     },
     {
@@ -229,8 +229,15 @@ if (document.getElementById("intro")) {
     typeCycle();
 }
 
-document.querySelectorAll('*').forEach(el => {
-    if (el.offsetWidth > document.documentElement.clientWidth) {
-        console.log(el);
-    }
-});
+
+// Contact button clicks
+var contactBtn= document.querySelectorAll(".contact-btn, #contact-me-btn")
+if (contactBtn){contactBtn.forEach((btn)=>{
+    btn.addEventListener("click", ()=>{
+        window.location.href= "contact.html"
+    })
+})}
+
+if(document.getElementById("project-btn")){
+    document.getElementById("project-btn").addEventListener("click", ()=>window.location.href= "projects.html")
+}
