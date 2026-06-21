@@ -1658,3 +1658,57 @@ main {
         margin-top: 2px;
     }
 }
+
+/* --- personal photo --- */
+.personal-photo {
+    text-align: center;
+    margin: 0 auto 70px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.photo-frame {
+    display: inline-block;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 12px 30px -10px rgba(124, 58, 237, 0.5);
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px;
+    transition: transform 0.4s ease;
+}
+
+.photo-frame:hover {
+    transform: translateY(-6px);
+}
+
+.photo-frame img {
+    display: block;
+    width: 320px;            /* capped so the tall photo doesn't dominate */
+    max-width: 100%;
+    height: auto;
+    border-radius: 14px;
+}
+
+.photo-caption {
+    margin-top: 18px;
+    font-family: "Italianno", cursive;
+    font-size: 1.8rem;
+    color: var(--ink);
+}
+
+/* phone */
+@media (max-width: 600px) {
+    .personal-photo {
+        width: 95%;
+    }
+
+    .photo-frame img {
+        width: 100%;
+        max-width: 280px;     /* keeps the portrait photo from getting too big */
+    }
+
+    .photo-caption {
+        font-size: 1.5rem;
+    }
+}
