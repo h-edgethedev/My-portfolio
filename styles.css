@@ -1064,7 +1064,7 @@ main {
     transform: translateX(-50%);
     font-family: Georgia, serif;
     font-size: 6rem;
-    color: rgba(228, 221, 241, 0.25);
+    color: rgba(255, 255, 255, 0.25);
     /* faded purple */
     line-height: 1;
 }
